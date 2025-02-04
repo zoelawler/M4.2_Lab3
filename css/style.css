@@ -1,4 +1,149 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+body {
+    background-color: rgb(165, 146, 171);
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+header, footer, nav, .main-content {
+    background-color: rgb(113, 101, 126);
+    border-radius: 20px;
+}
+
+header {
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+.title-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.title-logo h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 65px;
+    color: rgb(34, 34, 34);
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px white;
+}
+
+.title-logo img {
+    width: 85px;
+    right: 20px;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(148, 132, 164);
+    padding: 20px 0;
+    margin-top: 20px;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    padding: 10px;
+    display: block;
+    transition: color 0.15s ease-in-out;
+}
+
+
+nav ul li a:hover {
+    color: rgb(113, 101, 126);
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#main-paragraph {
+    flex: 2;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 1px;
+    background-color: rgb(148, 132, 164);
+    color: rgb(34, 34, 34);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-paragraph h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 35px;    text-align: center;
+    color: rgb(34, 34, 34);
+    margin: 20px auto;
+}
+
+#main-paragraph p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#sidebar {
+    margin: 20px;
+    margin-left: 0;
+    background-color: rgb(148, 132, 164);
+    flex: 1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#image-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+#image-sidebar img {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+#sidebar h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 35px;
+    color: rgb(34, 34, 34);
+    margin: 20px auto;
+    text-align: center;
+}
+
+footer {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer a {
+    color: rgb(148, 132, 164);
+    transition: color 0.15s ease-in-out;
+}
+
+footer a:hover {
+    color: rgb(68, 61, 76);
+} 

@@ -1,79 +1,69 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birdwatching</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+  <header>
+    <div class="title-logo">
+      <h1>Birdwatching</h1>
+      <img src="img/dove.png" alt="a simple dove logo" id="logo">
+    </div>
 
-  <label id="result">Result:</label>
+    <nav>
+      <ul>
+        <li><span>Home</span></li>
+        <li><a href="#">Get started</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Gear</a></li>
+        <li><a href="#">Forum</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <hr>
+  <div class="main-content">
+    <main id="main-paragraph">
+      <h2>Welcome</h2>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+      <p>Welcome to our fake birdwatching site. If this were a real site, it would be the ideal place to come to learn
+        more
+        about birdwatching, whether you are a beginner looking to learn how to get into birding, or an expert wanting to
+        share ideas, tips, and photos with other like-minded people.</p>
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
+      <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!</p>
 
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
+    </main>
 
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
+    <div id="sidebar">
+      <h2>Favourite photos</h2>
 
-    });
+      <div id="image-sidebar">
+        <a href="favorite-1.jpg"><img src="img/favorite-1_th.jpg"
+            alt="Small black bird, black claws, long black slender beak, links to larger version of the image"></a>
+        <a href="favorite-2.jpg"><img src="img/favorite-2_th.jpg"
+            alt="Top half of a pretty bird with bright blue plumage on neck, light colored beak, blue headdress, links to larger version of the image"></a>
+        <a href="favorite-3.jpg"><img src="img/favorite-3_th.jpg"
+            alt="Top half of a large bird with white plumage, very long curved narrow light colored break, links to larger version of the image"></a>
+        <a href="favorite-4.jpg"><img src="img/favorite-4_th.jpg"
+            alt="Large bird, mostly white plumage with black plumage on back and rear, long straight white beak, links to larger version of the image"></a>
+      </div>
+    </div>
+  </div>
 
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
+  <footer>
+    <p>This fake website example is CC0 — any part of this code may be reused in any way you wish. Original example
+      written by Chris Mills, 2016.</p>
 
+    <p><a href="http://game-icons.net/lorc/originals/dove.html">Dove icon</a> by Lorc.</p>
+  </footer>
 </body>
 
 </html>
